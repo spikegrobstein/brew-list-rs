@@ -1,4 +1,4 @@
 [[package]]
-name = "cmdline"
+name = "brew-list"
 version = "0.1.0"
 
