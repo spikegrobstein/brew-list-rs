@@ -4,8 +4,6 @@ use std::io::{BufRead, BufReader};
 use std::sync::mpsc;
 
 fn main() {
-    println!("Hello, world!");
-
     let mut cmd = Command::new("brew");
 
     cmd
@@ -15,7 +13,7 @@ fn main() {
 
     let mut result = cmd.spawn().expect("Failed to execute");
 
-    eprintln!("Starting process with id {}", result.id());
+    eprintln!("Starting brew process with id {}", result.id());
 
     let stdout = result.stdout.take().expect("could not get stdout");
     let stderr = result.stderr.take().expect("failed to get stderr");
